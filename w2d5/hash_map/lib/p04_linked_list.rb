@@ -14,12 +14,14 @@ class Link
     "#{@key}: #{@val}"
   end
 
+  # optional but useful, connects previous link to next link
+  # and removes self from list.
   def remove
     #middle element
     if @prev && @next
       @prev.next = @next
       @next.prev = @prev
-      @key, @prev, @next = [nil, nil, nil]
+      @key, @prev, @next = nil, nil, nil
     #first element
     elsif @next
       @next.prev = nil
@@ -29,8 +31,6 @@ class Link
       @prev.next = nil
       @prev = nil
     end
-    # optional but useful, connects previous link to next link
-    # and removes self from list.
   end
 end
 
@@ -87,16 +87,11 @@ class LinkedList
     if empty?
       @head.next = new_link
       @tail.prev = new_link
+      #assign to head and tail sentinal nodes
       new_link.next, new_link.prev = @tail, @head
-    # elsif @head.next.next == @tail
-    #   #insert
-    #   @tail.prev, @head.next = new_link, new_link
-    #   #assign to head and tail sentinal nodes
-    #   new_link.next, new_link.prev = @tail, @head
     else
       new_link.next = @tail
       last_node, @tail.prev = @tail.prev, new_link
-      # @tail.prev = new_link
       new_link.prev = last_node
       last_node.next = new_link
     end
@@ -114,9 +109,6 @@ class LinkedList
       link = link.next
     end
     nil
-    # obj = get(key_search)
-    # obj = value
-
   end
 
   def remove(key)
@@ -145,6 +137,6 @@ class LinkedList
     inject([]) { |acc, link| acc << "[#{link.key}, #{link.val}]" }.join(", ")
   end
 end
-#
+
 # a = Link.new("a", 2)
 # a.next = Link.new("b", 2)

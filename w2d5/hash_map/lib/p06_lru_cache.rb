@@ -15,6 +15,7 @@ class LRUCache
   end
 
   def get(key)
+    prc.call(key) unless @map.include?(key)
   end
 
   def to_s
