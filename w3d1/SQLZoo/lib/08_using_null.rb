@@ -22,10 +22,10 @@ def null_dept
     name
   FROM
     teachers
-    JOIN
-    depts ON teachers.dept_id = depts.id
+    -- LEFT OUTER JOIN
+    -- depts ON teachers.dept_id = depts.id
   WHERE
-    department IS NULL
+    dept_id IS NULL
   SQL
 end
 
@@ -34,12 +34,14 @@ def all_teachers_join
   # even if the department in NULL/nil.
   execute(<<-SQL)
   SELECT
-    name, department
-
+    teachers.name, depts.name
   FROM
     teachers
-      FULL JOIN
+      LEFT OUTER JOIN
       depts ON teachers.dept_id = depts.id
+  WHERE
+    teachers.name IS NOT NULL
+
 
   SQL
 end
@@ -50,10 +52,13 @@ def all_depts_join
   # the FROM and JOIN tables.
   execute(<<-SQL)
   SELECT
-
+    teachers.name, depts.name
   FROM
-
+    depts
+      LEFT OUTER JOIN
+      teachers on teachers.dept_id = depts.id
   WHERE
+    depts.name IS NOT NULL
 
   SQL
 end
