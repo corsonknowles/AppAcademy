@@ -6,52 +6,91 @@
     </title>
   </head>
   <body>
-    <h1>
-      This is the once and future home of the world's best recipes
-    </h1>
-    <h2>
-      The Peach Thing
-    </h2>
+  <header>
+    <img src="img/peachcobbler.jpg">
+    <nav>
+    <ul>
+      <li><a href="#description">Description</a></li>
+      <li><a href="#ingredients">Ingredients</a></li>
+      <li><a href="#directions">Directions</a></li>
+    </ul>
+  </nav>
+  </header>
 
-<img src="img/peachcobbler.jpg">
+  <h1>
+    This is the once and future home of the world's best recipes
+  </h1>
+  <h2>
+    The Peach Thing
+  </h2>
 
-<ul>Description</ul>
+  <h3><i>The Peach Thing is a kind of Peach Custard-Cobbler</i></h3>
 
-<ul>Ingredients</ul>
+  <section id="description">
+    <h4>Description</h4>
 
-<ul>Directions</ul>
+    <p>This eggy, custardy cobbler is delightful and nourishing. Make the most of peach season and eat it for breakfast and again for dessert.</p>
+  </section>
+
+  <aside id="ingredients">
+    <h4>Ingredients</h4>
+    <ul>
+      <li>3 eggs</li>
+      <li>1 cup sugar</li>
+      <li>1 cup sunflower oil</li>
+      <li>1 cup white unbleached flower</li>
+      <li>1/2 tsp baking powder</li>
+
+      <li>1 capfli of vanilla</li>
+      <li>1 pinch of salt</li>
+    </ul>
+  </aside>
+
+    <section id="directions">
+      <h4>Directions</h4>
+      <ol>
+        <li>Preheat oven to 400 degrees.</li>
+
+        <li>Beat three fresh eggs in a mixing bowl. Add 1 cup turbinado sugar, ½ to 1 cup of pure vegetable oil (recommend sunflower), a pinch of salt and a capful of vanilla extract. Mix until smooth.
+        Dry mix: 1 cup organic white unbleached flour with 1/2 teaspoon of baking powder and a full pinch of salt.
+        Flid dry mix into egg batter.</li>
+
+        <li>Cut peaches into 1/8 size crescent-moon wedges. Drop into 6 by 12 pre-greased glass baking pan, toss peaches with a little sugar and oil.</li>
+
+        <li>Pour custard mixture over peaches.</li>
+
+        <li>Bake for approximately 20 minutes, until golden brown.</li>
+      </ol>
+    </section>
+
+    <section id="reviews">
+
+    <form class="review" action="/reviews" method="post">
+      <label for="reviewer">Reviewer</label>
+        <input id="reviewer" type="text" name="reviewer" value="reviewer">
+
+      <label for="rating">Rating</label>
+        <input type="radio" selected="true" name="rating" value="1">
+        <input type="radio" name="rating" value="2">
+        <input type="radio" name="rating" value="3">
+        <input type="radio" name="rating" value="4">
+        <input type="radio" name="rating" value="5">
 
 
-<h3>The Peach Thing (Peach Custard-Cobbler)</h3>
-<h4>Description</h4>
-<p>This eggy, custardy cobbler is delightful and nourishing. Make the most of peach season and eat it for breakfast and again for dessert.</p>
+      <label for="">Expertise level</label>
+        <select class="" name="" value="">
+          <option value="Select Cooking Expertise" disabled="true" selected="true">Select Cooking Expertise Level</option>
+          <option value="Sometimes Cook">Sometimes Cook</option>
+          <option value="Cook Everyday">Cook Everyday</option>
+          <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+          <option value="Professional Chef">Professional Chef</option>
+        </select>
 
-<h4>Ingredients </h4>
-<ul>3 eggs</ul>
-<ul>1 cup sugar</ul>
-<ul>1 cup sunflower oil</ul>
-<ul>1 cup white unbleached flower</ul>
-<ul>1/2 tsp baking powder</ul>
+      </form>
+    </section>
 
-<ul>1 capful of vanilla</ul>
-<ul>1 pinch of salt</ul>
-
-
-
-<h4>Directions </h4>
-
-<ol>Preheat oven to 400 degrees.</ol>
-
-<ol>Beat three fresh eggs in a mixing bowl. Add 1 cup turbinado sugar, ½ to 1 cup of pure vegetable oil (recommend sunflower), a pinch of salt and a capful of vanilla extract. Mix until smooth.
-Dry mix: 1 cup organic white unbleached flour with 1/2 teaspoon of baking powder and a full pinch of salt.
-Fold dry mix into egg batter.</ol>
-
-<ol>Cut peaches into 1/8 size crescent-moon wedges. Drop into 6 by 12 pre-greased glass baking pan, toss peaches with a little sugar and oil.</ol>
-
-<ol>Pour custard mixture over peaches.</ol>
-
-<ol>Bake for approximately 20 minutes, until golden brown.</ol>
-
+    <footer>
+      <p>Original recipe and photography by me</p>
+    </footer>
   </body>
-
 </html>
