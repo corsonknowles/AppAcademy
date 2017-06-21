@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+</style>
+    <title>
+      Your Chosen Cat!
+    </title>
+  </head>
+  <body>
+    <section>
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>
+          <%= @cat.name %>
+        </td>
+      </tr>
+      <tr>
+        <th>Birth date</th>
+        <td>
+          <%= @cat.birth_date %>
+        </td>
+      </tr>
+      <tr>
+        <th>Color</th>
+        <td>
+          <%= @cat.color %>
+        </td>
+      </tr>
+      <tr>
+        <th>Sex</th>
+        <td>
+          <%= @cat.sex %>
+        </td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td>
+          <%= @cat.description %>
+        </td>
+      </tr>
+    </table>
+  </section>
+  <section>
+    <p>
+      <%= link_to "All the cats", cats_url %>
+    </p>
+  </section>
+  </body>
+</html>

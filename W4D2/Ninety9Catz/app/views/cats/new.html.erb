@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+    Gimme all yo' cats, yo
+    </title>
+  </head>
+  <body>
+
+    <%= render 'form', cat: @cat, action: :new %>
+
+    <!-- <form class="catmaker" action="cats_url" method="post">
+
+      <label for="Name">Cat Name</label>
+      <input type="text" name="Name" value="name">
+
+      <br />
+
+      <label for="catsex">Cat Sex</label>
+      &nbsp; &nbsp;
+      M <input type="radio" name="catsex" value="M">
+      F <input type="radio" name="catsex" value="F">
+      Z <input type="radio" name="catsex" value="Z">
+
+      <br />
+
+      <label for="color"></label>
+      <select class="" name="color">
+      <option value="Select Color" selected="true" disabled>Select Color
+      </option>
+      <% Cat::COLORS.each do |catcolor| %>
+      <option value=<%=catcolor%> >
+        <%=  catcolor %>
+      </option>
+      <% end %>
+    </select>
+    <p>
+      <label for="birth_date">Birth Date</label>
+      <input type="date" name="birth_date" value="birth_date">
+    </p>
+    <p>
+      <label for="description">Description</label>
+      <br />
+      <textarea value="description" name="description" rows="8" cols="80"></textarea>
+    </p> -->
+
+    </form>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      All of the cats
+    </title>
+  </head>
+  <body>
+    <section>
+      <% @cats.each do |cat| %>
+      <p>
+        <%= link_to cat.name, cat_url(cat.id) %>
+      </p>
+      <% end %>
+    </section>
+
+    <section id="Create">
+      <p>
+        <button type="button" name="button">
+           <%= link_to "Matchmaker, matchmaker, make me a cat.", new_cat_url %>
+        </button>
+      </p>
+    </section>
+
+  </body>
+</html>
